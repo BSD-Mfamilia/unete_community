@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Sistemas de Donaciones Unete Comunity,
 
-Things you may want to cover:
+Fue desarrollado un sistema de donaciones basico.
 
-* Ruby version
+Existe un job que es el encargado de revisar cada minuto quien completa un ciclo y lo promueve al siguiente, asi los que inviten a medida que completan el ciclo se van posicionando de bajo de el.
 
-* System dependencies
 
-* Configuration
+Running your app
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+To run your app, use foreman start. Foreman will run Procfile.dev via foreman start -f Procfile.dev as configured by the .foreman file and will launch the development processes rails server, sidekiq, and webpack-dev-server processes.
