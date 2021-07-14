@@ -1,0 +1,54 @@
+<%= form_with(model: [@campaign, @donation], local: true) do |form| %>
+  <% if donation.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(donation.errors.count, "error") %> prohibited this donation from being saved:</h2>
+
+      <ul>
+      <% donation.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <!--<div class="mb-3">
+    <%#= form.label :amount, class: 'form-label' %>
+    <%#= form.number_field :amount, class: 'form-control' %>
+  </div>-->
+
+  <div class="mb-3">
+    <%= form.label :invited_by, class: 'form-label' %>
+    <%= form.email_field :invited_by, class: 'form-control' %>
+  </div>
+
+  <!--<div class="mb-3">
+    <%#= form.label :cycle, class: 'form-label' %>
+    <%#= form.number_field :cycle, class: 'form-control' %>
+  </div>-->
+
+  <!--<div class="mb-3">
+    <%#= form.label :campaign_id, class: 'form-label' %>
+    <%#= form.text_field :campaign_id, class: 'form-control' %>
+  </div>-->
+
+  <!--<div class="mb-3">
+    <%#= form.label :user_id, class: 'form-label' %>
+    <%#= form.text_field :user_id, class: 'form-control' %>
+  </div>-->
+
+  <div class="mb-3">
+    <%# if donation.persisted? %>
+      <!--<div class="float-right">
+        <%#= link_to 'Destroy', donation, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>-->
+    <%# end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if donation.persisted? %>
+      <%#= link_to "Cancel", donation, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", root_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>

@@ -1,0 +1,54 @@
+<%= form_with(model: campaign, local: true) do |form| %>
+  <% if campaign.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(campaign.errors.count, "error") %> prohibited this campaign from being saved:</h2>
+
+      <ul>
+      <% campaign.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="mb-3">
+    <%= form.label :name, class: 'form-label' %>
+    <%= form.text_field :name, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :description, class: 'form-label' %>
+    <%= form.text_field :description, class: 'form-control' %>
+  </div>
+
+  <div class="mb-3">
+    <%= form.label :amount, class: 'form-label' %>
+    <%= form.number_field :amount, class: 'form-control' %>
+  </div>
+
+  <!--<div class="mb-3">
+    <%#= form.label :status, class: 'form-label' %>
+    <%#= form.check_box :status, class: 'form-control' %>
+  </div>-->
+
+  <!--<div class="mb-3">
+    <%#= form.label :user_id, class: 'form-label' %>
+    <%#= form.text_field :user_id, class: 'form-control' %>
+  </div>-->
+
+  <div class="mb-3">
+    <%# if campaign.persisted? %>
+      <!--<div class="float-right">
+        <%= link_to 'Destroy', campaign, method: :delete, class: "text-danger", data: { confirm: 'Are you sure?' } %>
+      </div>-->
+    <%# end %>
+
+    <%= form.submit class: 'btn btn-primary' %>
+
+    <% if campaign.persisted? %>
+      <%#= link_to "Cancel", campaign, class: "btn btn-link" %>
+    <% else %>
+      <%= link_to "Cancel", root_path, class: "btn btn-link" %>
+    <% end %>
+  </div>
+<% end %>

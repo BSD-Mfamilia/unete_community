@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  amount: 1.5
+  invited_by: MyString
+  cycle: 1
+  campaign: one
+  user: one
+
+two:
+  amount: 1.5
+  invited_by: MyString
+  cycle: 1
+  campaign: two
+  user: two

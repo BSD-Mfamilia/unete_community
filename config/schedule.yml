@@ -1,0 +1,4 @@
+cycle_checker_job:
+  cron: "*/1 * * * *"
+  class: "CycleCheckerJob"
+  queue: default

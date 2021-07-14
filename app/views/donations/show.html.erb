@@ -1,0 +1,22 @@
+<div class="page-header">
+  <%= link_to donations_path, class: 'btn btn-default' do %>
+    All Donations
+  <% end %>
+  <%= link_to edit_donation_path(@donation), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show donation</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Amount:</dt>
+  <dd><%= @donation.amount %></dd>
+  <dt>Invited by:</dt>
+  <dd><%= @donation.invited_by %></dd>
+  <dt>Cycle:</dt>
+  <dd><%= @donation.cycle %></dd>
+  <dt>Campaign:</dt>
+  <dd><%= @donation.campaign %></dd>
+  <dt>User:</dt>
+  <dd><%= @donation.user %></dd>
+</dl>

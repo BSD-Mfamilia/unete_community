@@ -100,6 +100,8 @@ GEM
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
     erubi (1.10.0)
+    et-orbi (1.2.4)
+      tzinfo
     execjs (2.8.1)
     faraday (1.4.3)
       faraday-em_http (~> 1.0)
@@ -122,6 +124,9 @@ GEM
       sassc (>= 1.11)
     friendly_id (5.4.2)
       activerecord (>= 4.0.0)
+    fugit (1.5.0)
+      et-orbi (~> 1.1, >= 1.1.8)
+      raabro (~> 1.4)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
     hashie (4.1.0)
@@ -206,6 +211,7 @@ GEM
       nio4r (~> 2.0)
     pundit (2.1.0)
       activesupport (>= 3.0.0)
+    raabro (1.4.0)
     racc (1.5.2)
     rack (2.2.3)
     rack-mini-profiler (2.3.2)
@@ -273,6 +279,9 @@ GEM
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
       redis (>= 4.2.0)
+    sidekiq-cron (1.2.0)
+      fugit (~> 1.1)
+      sidekiq (>= 4.2.1)
     sitemap_generator (6.1.2)
       builder (~> 3.0)
     spring (2.1.1)
@@ -349,6 +358,7 @@ DEPENDENCIES
   sass-rails (>= 6)
   selenium-webdriver
   sidekiq (~> 6.2)
+  sidekiq-cron
   sitemap_generator (~> 6.1, >= 6.1.2)
   spring
   turbolinks (~> 5)

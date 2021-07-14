@@ -1,0 +1,20 @@
+<div class="page-header">
+  <%= link_to campaigns_path, class: 'btn btn-default' do %>
+    All Campaigns
+  <% end %>
+  <%= link_to edit_campaign_path(@campaign), class: 'btn btn-primary' do %>
+    Edit
+  <% end %>
+  <h1>Show campaign</h1>
+</div>
+
+<dl class="dl-horizontal">
+  <dt>Name:</dt>
+  <dd><%= @campaign.name %></dd>
+  <dt>Description:</dt>
+  <dd><%= @campaign.description %></dd>
+  <dt>Status:</dt>
+  <dd><%= @campaign.status %></dd>
+  <dt>User:</dt>
+  <dd><%= @campaign.user %></dd>
+</dl>
