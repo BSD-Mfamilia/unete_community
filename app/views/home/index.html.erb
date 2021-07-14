@@ -17,6 +17,7 @@
         <% end %>
       </div>
       <span class="d-block"><br><%= campaign.description.capitalize %><br></span>
+      <span class="d-block"><br>Complete Cycles: <%= Donation.get_full_cycles_per_user(campaign, current_user) %><br></span>
     </div>
   </div>
   <% end %>

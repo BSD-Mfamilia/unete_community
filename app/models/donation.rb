@@ -10,6 +10,8 @@ class Donation < ApplicationRecord
   validate :validate_invitation, on: :create
   validate :validate_number_of_direct_after_the_first_cycle, on: :create, if: -> { cycle >= 2 }
 
+  scope :get_full_cycles_per_user, -> (campaign, user) { where(campaign: campaign, user: user, complete_cycle: true).count }
+
   def validate_invitation
     if self.sponsor == false && self.user.email == self.invited_by
       self.errors.add(:base, "Invalid invitation")
